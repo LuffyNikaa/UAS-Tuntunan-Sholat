@@ -10,7 +10,7 @@ class Menu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        findViewById<Button>(R.id.button).setOnClickListener {
+        findViewById<Button>(R.id.button1).setOnClickListener {
             startActivity(Intent(this, Page1::class.java))
         }
 

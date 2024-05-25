@@ -24,6 +24,10 @@ class Page2 : AppCompatActivity() {
         artiTayamumTitle.setOnClickListener {
             toggleVisibility(artiTayamumContent)
         }
+        val artiTayamumText = """
+            Tayammum ialah mengusap muka dan dua belah tangan dengan debu yang suci. Pada suatu ketika tayammum itu dapat menggantikan wudlu dan mandi dengan syarat-syarat tertentu.
+        """.trimIndent()
+        artiTayamumContent.text = artiTayamumText
 
         // Fardhu Tayamum Section
         val fardhuTayamumTitle = findViewById<TextView>(R.id.fardhuTayamumTitle)
@@ -31,6 +35,14 @@ class Page2 : AppCompatActivity() {
         fardhuTayamumTitle.setOnClickListener {
             toggleVisibility(fardhuTayamumContent)
         }
+        val fardhuTayamumText = """
+            1. Niat
+            2. Mengusap wajah dengan debu dengan dua kali usapan
+            3. Mengusap kedua tangan sampai siku dengan dua kali usapan
+            4. Memindahkan debu kepada anggota yang diusap
+            5. Tertib, artinya dilakukan secara berurutan
+            """.trimIndent()
+        fardhuTayamumContent.text = fardhuTayamumText
 
         // Sunnah Tayamum Section
         val sunnahTayamumTitle = findViewById<TextView>(R.id.sunnahTayamumTitle)
@@ -38,6 +50,14 @@ class Page2 : AppCompatActivity() {
         sunnahTayamumTitle.setOnClickListener {
             toggleVisibility(sunnahTayamumContent)
         }
+        val sunnahTayamumText = """
+            Sunnah sebelum dan selama tayammum:
+
+            1. Membaca basmalah
+            2. Mendahuluan anggota tubuh bagian kanan sebelum kiri
+            3. Menipiskan debu
+            """.trimIndent()
+        sunnahTayamumContent.text = sunnahTayamumText
 
         // Syarat Tayamum Section
         val syaratTayamumTitle = findViewById<TextView>(R.id.syaratTayamumTitle)
@@ -45,12 +65,19 @@ class Page2 : AppCompatActivity() {
         syaratTayamumTitle.setOnClickListener {
             toggleVisibility(syaratTayamumContent)
         }
+        val syaratTayamumText = """
+            Syarat diperbolehkannya melakukan tayammum sebagai pengganti wudhu ialah:
+
+            1. Tidak tersedia air suci walau telah berusaha mencarinya 
+            2. Tidak diperbolehkan terkena air karena suatu hal misalnya sakit yang apabila terkena air dapat membuat sakitnya kambuh
+            3. Telah masuk waktu shalat
+            4. Tayammum dengan debu yang suci
+            """.trimIndent()
+        syaratTayamumContent.text = syaratTayamumText
 
         // Tata Cara Tayamum Section
         val tataTayamumTitle = findViewById<TextView>(R.id.tataTayamumTitle)
-        val tataTayamumContent = findViewById<TextView>(R.id.tataTayamumContent)
         tataTayamumTitle.setOnClickListener {
-            toggleVisibility(tataTayamumContent)
         }
 
         // Yang Membatalkan Tayamum Section
@@ -59,6 +86,14 @@ class Page2 : AppCompatActivity() {
         batalTayamumTitle.setOnClickListener {
             toggleVisibility(batalTayamumContent)
         }
+        val batalTayamumText = """
+            Adapun hal-hal yang membatalkan tayammum antara lain:
+
+            1. Segala hal yang membatalkan wudhu
+            2. Melihat/menemukan air suci sebelum shalat
+            3. Murtad, keluar dari islam
+            """.trimIndent()
+        batalTayamumContent.text = batalTayamumText
 
         // Niat Tayamum Section
         val niatTayamumTitle = findViewById<TextView>(R.id.niatTayamumTitle)
@@ -66,13 +101,26 @@ class Page2 : AppCompatActivity() {
         niatTayamumTitle.setOnClickListener {
             toggleVisibility(niatTayamumContent)
         }
+        val niatTayamumText = """
+            نويت التيمم لاستباحَةِ الصَّلَاةِ لله تَعَالَى
 
-        // Doa Tayamum Section
+            Nawaytu tayammuma li istibaakhati sholati lillahi ta'ala
+
+            Artinya:
+            Aku berniat tayamum agar diperbolehkan sholat karena Allah.
+            """.trimIndent()
+        niatTayamumContent.text = niatTayamumText
+
+        // Keterangan Tayamum Section
         val ketTayamumTitle = findViewById<TextView>(R.id.ketTayamumTitle)
         val ketTayamumContent = findViewById<TextView>(R.id.ketTayamumContent)
         ketTayamumTitle.setOnClickListener {
             toggleVisibility(ketTayamumContent)
         }
+        val ketTayamumText = """
+            Sekali bertayammum hanya dapat digunakan untuk satu shalat fardlu saja, meskipun tayammum belum batal. Adapun untuk shalat sunnah beberapa kali cukup dengan satu tayammum asalkan belum batal.
+            """.trimIndent()
+        ketTayamumContent.text = ketTayamumText
     }
 
     override fun onSupportNavigateUp(): Boolean {

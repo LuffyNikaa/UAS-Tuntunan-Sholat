@@ -12,20 +12,15 @@
         android:id="@+id/imageView"
         android:layout_width="159dp"
         android:layout_height="209dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="126dp"
-        android:layout_marginBottom="334dp"
+        android:layout_centerInParent="true"
         app:srcCompat="@drawable/ic_shalat" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="262dp"
         android:layout_height="76dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="176dp"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
         android:text="Sahabat setia bagi setiap Muslim untuk memperkuat hubungan spiritual dengan Allah. "
         android:textAlignment="center" />
 
@@ -33,10 +28,12 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@id/imageView"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="138dp"
-        android:layout_marginBottom="267dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="47dp"
         android:fontFamily="sans-serif-black"
         android:text="Tuntunan SHOLAT"
         android:textAlignment="center"
@@ -47,10 +44,8 @@
         android:id="@+id/Mulai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="102dp"
+        android:layout_below="@id/textView2"
+        android:layout_centerHorizontal="true"
         android:text="Mulai" />
 
 </RelativeLayout>

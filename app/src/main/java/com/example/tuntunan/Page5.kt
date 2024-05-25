@@ -22,14 +22,12 @@ class Page5 : AppCompatActivity() {
         val jamaTitle = findViewById<TextView>(R.id.jamaTitle)
         val jamaContent = findViewById<TextView>(R.id.jamaContent)
         jamaTitle.setOnClickListener {
-            toggleVisibility(jamaContent)
         }
 
         // Qashar Section
         val qasharTitle = findViewById<TextView>(R.id.qasharTitle)
         val qasharContent = findViewById<TextView>(R.id.qasharContent)
         qasharTitle.setOnClickListener {
-            toggleVisibility(qasharContent)
         }
     }
 

@@ -24,19 +24,15 @@ class Page6 : AppCompatActivity() {
         artiSakitTitle.setOnClickListener {
             toggleVisibility(artiSakitContent)
         }
-
-        // Section: Syarat
-        val syaratSakitTitle = findViewById<TextView>(R.id.syaratSakitTitle)
-        val syaratSakitContent = findViewById<TextView>(R.id.syaratSakitContent)
-        syaratSakitTitle.setOnClickListener {
-            toggleVisibility(syaratSakitContent)
-        }
+        val artiSakitText = """
+            Sholat saat sakit adalah kewajiban bagi setiap muslim, yang tetap harus dilaksanakan sesuai kemampuan meskipun dengan penyesuaian tertentu. Ini merupakan bagian dari menjaga agama (hifz al-din) dalam Islam. Namun, jika kondisi sangat parah atau melaksanakan sholat akan memperburuk kondisi, ada pengecualian di mana sholat dapat digantikan dengan cara yang sesuai. Meskipun demikian, sholat tetap merupakan kewajiban yang penting yang harus diutamakan.
+            """.trimIndent()
+        artiSakitContent.text = artiSakitText
 
         // Section: Tata Cara
         val tataSakitTitle = findViewById<TextView>(R.id.tataSakitTitle)
         val tataSakitContent = findViewById<TextView>(R.id.tataSakitContent)
         tataSakitTitle.setOnClickListener {
-            toggleVisibility(tataSakitContent)
         }
     }
 

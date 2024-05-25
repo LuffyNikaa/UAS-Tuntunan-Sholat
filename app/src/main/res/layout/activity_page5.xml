@@ -44,7 +44,6 @@
                     android:id="@+id/jamaContent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Arti: Penggabungan dua sholat dalam satu waktu.\n\nSyarat: ..."
                     android:visibility="gone"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -76,7 +75,6 @@
                     android:id="@+id/qasharContent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Arti: Memendekkan jumlah rakaat sholat.\n\nSyarat: ..."
                     android:visibility="gone"
                     android:textSize="16sp" />
             </LinearLayout>
