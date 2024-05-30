@@ -1,9 +1,10 @@
 package com.example.tuntunan
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 
 class Page1 : AppCompatActivity() {
@@ -43,7 +44,7 @@ class Page1 : AppCompatActivity() {
             3. Mencuci kedua tangan hingga siku.
             4. Mengusap sebagian kepala.
             5. Mencuci kedua kaki hingga mata kaki.
-            6. Melakukan lahkah tersebut secara berurutan dan tanpa jeda.
+            6. Melakukan langkah tersebut secara berurutan dan tanpa jeda.
         """.trimIndent()
         fardhuWudhuContent.text = fardhuWudhuText
 
@@ -76,7 +77,7 @@ class Page1 : AppCompatActivity() {
             toggleVisibility(syaratWudhuContent)
         }
         val syaratWudhuText = """
-            Adapun hal fardhu wudhu antara lain:
+            Adapun hal syarat wudhu antara lain:
 
             1. Beragama Islam.
             2. Tamyiz, yakni dapat membedakan baik dan buruknya sesuatu.
@@ -91,8 +92,8 @@ class Page1 : AppCompatActivity() {
         // Tata Cara Wudhu Section
         val tataWudhuTitle = findViewById<TextView>(R.id.tataWudhuTitle)
         tataWudhuTitle.setOnClickListener {
+            openPdf("page_wudhu.pdf")
         }
-
 
         // Yang Membatalkan Wudhu Section
         val batalWudhuTitle = findViewById<TextView>(R.id.batalWudhuTitle)
@@ -150,5 +151,10 @@ Aku bersaksi bahwa tiada Tuhan selain Allah, Yang Mahaesa, tiada sekutu bagi-Nya
 
     private fun toggleVisibility(view: View) {
         view.visibility = if (view.visibility == View.VISIBLE) View.GONE else View.VISIBLE
+    }
+    private fun openPdf(fileName: String) {
+        val intent = Intent(this, PdfActivity::class.java)
+        intent.putExtra("pdfFileName", fileName)
+        startActivity(intent)
     }
 }

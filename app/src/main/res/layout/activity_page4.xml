@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-        <!-- Toolbar -->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+    <!-- ScrollView with Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            android:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
         <!-- Dhuha Section -->
         <androidx.cardview.widget.CardView
@@ -39,14 +46,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/dhuhaContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Dhuha..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -70,14 +69,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/hajatContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Hajat..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -102,14 +93,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/iedContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Ied..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -134,14 +117,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/istikharahContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Istikharah..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -166,14 +141,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/istishqaContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Istishqa..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -198,14 +165,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/khusufContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Khusuf..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -230,14 +189,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/rawatibContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Rawatib..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -262,14 +213,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/safarContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Safar..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -294,14 +237,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/tahajjudContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Tahajjud..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -326,14 +261,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/tahiyatulMasjidContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Tahiyatul Masjid..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -358,14 +285,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/tarawihContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Tarawih..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -390,14 +309,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/tasbihContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Tasbih..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -422,14 +333,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/taubatContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Taubat..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -454,16 +357,8 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
-
-                <TextView
-                    android:id="@+id/witirContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi dari Sholat Witir..."
-                    android:visibility="gone"
-                    android:textSize="16sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-</ScrollView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

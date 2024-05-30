@@ -1,9 +1,9 @@
 package com.example.tuntunan
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 
 class Page4 : AppCompatActivity() {
@@ -20,100 +20,86 @@ class Page4 : AppCompatActivity() {
 
         // Dhuha Section
         val dhuhaTitle = findViewById<TextView>(R.id.dhuhaTitle)
-        val dhuhaContent = findViewById<TextView>(R.id.dhuhaContent)
         dhuhaTitle.setOnClickListener {
-            toggleVisibility(dhuhaContent)
+            openPdf("shalat_dhuha.pdf")
         }
 
         // Hajat Section
         val hajatTitle = findViewById<TextView>(R.id.hajatTitle)
-        val hajatContent = findViewById<TextView>(R.id.hajatContent)
         hajatTitle.setOnClickListener {
-            toggleVisibility(hajatContent)
+            openPdf("shalat_hajat.pdf")
         }
 
         // Ied Section
         val iedTitle = findViewById<TextView>(R.id.iedTitle)
-        val iedContent = findViewById<TextView>(R.id.iedContent)
         iedTitle.setOnClickListener {
-            toggleVisibility(iedContent)
+            openPdf("shalat_ied.pdf")
         }
 
         // Istikharah Section
         val istikharahTitle = findViewById<TextView>(R.id.istikharahTitle)
-        val istikharahContent = findViewById<TextView>(R.id.istikharahContent)
         istikharahTitle.setOnClickListener {
-            toggleVisibility(istikharahContent)
+            openPdf("shalat_istikharah.pdf")
         }
 
         // Istishqa Section
         val istishqaTitle = findViewById<TextView>(R.id.istishqaTitle)
-        val istishqaContent = findViewById<TextView>(R.id.istishqaContent)
         istishqaTitle.setOnClickListener {
-            toggleVisibility(istishqaContent)
+            openPdf("shalat_istishqa.pdf")
         }
 
         // Khusuf Section
         val khusufTitle = findViewById<TextView>(R.id.khusufTitle)
-        val khusufContent = findViewById<TextView>(R.id.khusufContent)
         khusufTitle.setOnClickListener {
-            toggleVisibility(khusufContent)
+            openPdf("shalat_khusuf.pdf")
         }
 
         // Rawatib Section
         val rawatibTitle = findViewById<TextView>(R.id.rawatibTitle)
-        val rawatibContent = findViewById<TextView>(R.id.rawatibContent)
         rawatibTitle.setOnClickListener {
-            toggleVisibility(rawatibContent)
+            openPdf("shalat_rawatib.pdf")
         }
 
         // Safar Section
         val safarTitle = findViewById<TextView>(R.id.safarTitle)
-        val safarContent = findViewById<TextView>(R.id.safarContent)
         safarTitle.setOnClickListener {
-            toggleVisibility(safarContent)
+            openPdf("shalat_safar.pdf")
         }
 
         // Tahajjud Section
         val tahajjudTitle = findViewById<TextView>(R.id.tahajjudTitle)
-        val tahajjudContent = findViewById<TextView>(R.id.tahajjudContent)
         tahajjudTitle.setOnClickListener {
-            toggleVisibility(tahajjudContent)
+            openPdf("shalat_tahajjud.pdf")
         }
 
         // Tahiyatul Masjid Section
         val tahiyatulMasjidTitle = findViewById<TextView>(R.id.tahiyatulMasjidTitle)
-        val tahiyatulMasjidContent = findViewById<TextView>(R.id.tahiyatulMasjidContent)
         tahiyatulMasjidTitle.setOnClickListener {
-            toggleVisibility(tahiyatulMasjidContent)
+            openPdf("shalat_tahiyatul_masjid.pdf")
         }
 
         // Tarawih Section
         val tarawihTitle = findViewById<TextView>(R.id.tarawihTitle)
-        val tarawihContent = findViewById<TextView>(R.id.tarawihContent)
         tarawihTitle.setOnClickListener {
-            toggleVisibility(tarawihContent)
+            openPdf("shalat_tarawih.pdf")
         }
 
         // Tasbih Section
         val tasbihTitle = findViewById<TextView>(R.id.tasbihTitle)
-        val tasbihContent = findViewById<TextView>(R.id.tasbihContent)
         tasbihTitle.setOnClickListener {
-            toggleVisibility(tasbihContent)
+            openPdf("shalat_tasbih.pdf")
         }
 
         // Taubat Section
         val taubatTitle = findViewById<TextView>(R.id.taubatTitle)
-        val taubatContent = findViewById<TextView>(R.id.taubatContent)
         taubatTitle.setOnClickListener {
-            toggleVisibility(taubatContent)
+            openPdf("shalat_taubat.pdf")
         }
 
         // Witir Section
         val witirTitle = findViewById<TextView>(R.id.witirTitle)
-        val witirContent = findViewById<TextView>(R.id.witirContent)
         witirTitle.setOnClickListener {
-            toggleVisibility(witirContent)
+            openPdf("shalat_witir.pdf")
         }
     }
 
@@ -122,7 +108,9 @@ class Page4 : AppCompatActivity() {
         return true
     }
 
-    private fun toggleVisibility(view: View) {
-        view.visibility = if (view.visibility == View.VISIBLE) View.GONE else View.VISIBLE
+    private fun openPdf(fileName: String) {
+        val intent = Intent(this, PdfActivity::class.java)
+        intent.putExtra("pdfFileName", fileName)
+        startActivity(intent)
     }
 }

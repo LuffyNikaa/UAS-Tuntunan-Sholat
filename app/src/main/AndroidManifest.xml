@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tuntunan"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -29,6 +30,7 @@
         <activity android:name=".Page5"></activity>
         <activity android:name=".Page6"></activity>
         <activity android:name=".Page7"></activity>
+        <activity android:name=".PdfActivity" />
     </application>
 
 </manifest>

@@ -1,9 +1,10 @@
 package com.example.tuntunan
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 
 class Page3 : AppCompatActivity() {
@@ -20,37 +21,32 @@ class Page3 : AppCompatActivity() {
 
         // Subuh Section
         val subuhTitle = findViewById<TextView>(R.id.subuhTitle)
-        val subuhContent = findViewById<TextView>(R.id.subuhContent)
         subuhTitle.setOnClickListener {
-            toggleVisibility(subuhContent)
+            openPdf("shalat_subuh.pdf")
         }
 
         // Dhuhur Section
         val dhuhurTitle = findViewById<TextView>(R.id.dhuhurTitle)
-        val dhuhurContent = findViewById<TextView>(R.id.dhuhurContent)
         dhuhurTitle.setOnClickListener {
-            toggleVisibility(dhuhurContent)
+            openPdf("shalat_dzuhur.pdf")
         }
 
         // Ashar Section
         val asharTitle = findViewById<TextView>(R.id.asharTitle)
-        val asharContent = findViewById<TextView>(R.id.asharContent)
         asharTitle.setOnClickListener {
-            toggleVisibility(asharContent)
+            openPdf("shalat_ashar.pdf")
         }
 
         // Maghrib Section
         val maghribTitle = findViewById<TextView>(R.id.maghribTitle)
-        val maghribContent = findViewById<TextView>(R.id.maghribContent)
         maghribTitle.setOnClickListener {
-            toggleVisibility(maghribContent)
+            openPdf("shalat_maghrib.pdf")
         }
 
         // Isya Section
         val isyaTitle = findViewById<TextView>(R.id.isyaTitle)
-        val isyaContent = findViewById<TextView>(R.id.isyaContent)
         isyaTitle.setOnClickListener {
-            toggleVisibility(isyaContent)
+            openPdf("shalat_isya.pdf")
         }
     }
 
@@ -61,5 +57,10 @@ class Page3 : AppCompatActivity() {
 
     private fun toggleVisibility(view: View) {
         view.visibility = if (view.visibility == View.VISIBLE) View.GONE else View.VISIBLE
+    }
+    private fun openPdf(fileName: String) {
+        val intent = Intent(this, PdfActivity::class.java)
+        intent.putExtra("pdfFileName", fileName)
+        startActivity(intent)
     }
 }

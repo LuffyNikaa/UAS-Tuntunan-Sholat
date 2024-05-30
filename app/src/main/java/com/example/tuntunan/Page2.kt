@@ -1,9 +1,10 @@
 package com.example.tuntunan
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 
 class Page2 : AppCompatActivity() {
@@ -78,6 +79,7 @@ class Page2 : AppCompatActivity() {
         // Tata Cara Tayamum Section
         val tataTayamumTitle = findViewById<TextView>(R.id.tataTayamumTitle)
         tataTayamumTitle.setOnClickListener {
+            openPdf("page_tayammum.pdf")
         }
 
         // Yang Membatalkan Tayamum Section
@@ -130,5 +132,10 @@ class Page2 : AppCompatActivity() {
 
     private fun toggleVisibility(view: View) {
         view.visibility = if (view.visibility == View.VISIBLE) View.GONE else View.VISIBLE
+    }
+    private fun openPdf(fileName: String) {
+        val intent = Intent(this, PdfActivity::class.java)
+        intent.putExtra("pdfFileName", fileName)
+        startActivity(intent)
     }
 }

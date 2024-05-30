@@ -1,9 +1,10 @@
 package com.example.tuntunan
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 
 class Page6 : AppCompatActivity() {
@@ -31,8 +32,8 @@ class Page6 : AppCompatActivity() {
 
         // Section: Tata Cara
         val tataSakitTitle = findViewById<TextView>(R.id.tataSakitTitle)
-        val tataSakitContent = findViewById<TextView>(R.id.tataSakitContent)
         tataSakitTitle.setOnClickListener {
+            openPdf("shalat_bagi_orang_sakit.pdf")
         }
     }
 
@@ -43,5 +44,10 @@ class Page6 : AppCompatActivity() {
 
     private fun toggleVisibility(view: View) {
         view.visibility = if (view.visibility == View.VISIBLE) View.GONE else View.VISIBLE
+    }
+    private fun openPdf(fileName: String) {
+        val intent = Intent(this, PdfActivity::class.java)
+        intent.putExtra("pdfFileName", fileName)
+        startActivity(intent)
     }
 }
