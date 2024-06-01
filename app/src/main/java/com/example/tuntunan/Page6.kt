@@ -17,7 +17,7 @@ class Page6 : AppCompatActivity() {
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Sholat Jama' dan Qashar"
+        supportActionBar?.title = "Sholat Bagi Orang Sakit"
 
         // Section: Arti
         val artiSakitTitle = findViewById<TextView>(R.id.artiSakitTitle)
